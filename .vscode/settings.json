@@ -4,5 +4,6 @@
   "task.allowAutomaticTasks": "on",
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
-  }
+  },
+  "java.debug.settings.onBuildFailureProceed": true
 }
