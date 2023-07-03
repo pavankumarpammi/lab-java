@@ -36,7 +36,7 @@ class Pro1 {
     public static void main(String[] args) {
         Find_ind ob =new Find_ind();
         int arr[]={2,7,11,15};
-        int target =9;
+        int target =26;
         ob.ind(arr,target);
     }
 }

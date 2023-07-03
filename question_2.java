@@ -16,30 +16,44 @@
 
 
 
+// class Solution {
+//     public int removeElement(int[] nums, int val) {
+//         int count=0;
+//         for(int i=0;i<nums.length;i++)
+//         {
+//             if(nums[i]!=val)
+//             {
+//                 nums[count]=nums[i];
+//                 count++;
+//             }
+//         }
+//         return count;
+        
+//     }
+// }
+
+
 class Solution {
     public int removeElement(int[] nums, int val) {
-        int count=0;
-        for(int i=0;i<nums.length;i++)
-        {
-            if(nums[i]!=val)
-            {
-                nums[count]=nums[i];
-                count++;
+        int i = 0;
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != val) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
+                i++;
             }
         }
-        return count;
-        
+        return i;
     }
 }
 class Question2{
     public static void main(String[] args) {
-        int nums1[]={3,2,2,3};
-        int val1 =3;
+        int nums[]={3,2,2,3};
+        int val =3;
         Solution ob = new Solution();
-        ob.removeElement(nums1, val1);
-        for(int i:nums1)
-        {
-           System.out.print(i+" ");
-        }
+        int res =ob.removeElement(nums, val);
+        System.out.println(res);
+    
     }
 }
