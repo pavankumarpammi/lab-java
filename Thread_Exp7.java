@@ -29,7 +29,7 @@ class Lib implements Runnable{
     }
     else{
         try {
-            synchronized(s1)
+            synchronized(s3)
             {
                 Thread.sleep(3000);
                 System.out.println("Student 2 acc "+s1);
@@ -37,7 +37,7 @@ class Lib implements Runnable{
                  {
                 System.out.println("Student 2 acc "+s2);
                 Thread.sleep(3000);
-                synchronized(s3)
+                synchronized(s1)
                 {
                     System.out.println("Student 2 acc "+s3);//dead lock
                 }
